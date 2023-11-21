@@ -1,0 +1,14 @@
+<div>
+    {{pokemon?.name}}
+    <img src="{{pokemon?.sprites.other.dream_world.front_default}}">
+    <div *ngFor="let item of pokemon?.types">
+        {{item.type.name}}
+    </div>
+    {{pokemon?.weight}}
+    {{pokemon?.height}}
+    <ul>
+        <li *ngFor="let item of pokemon?.stats">
+            {{item.stat.name}}:{{item.base_stat}}
+        </li>
+    </ul>
+</div>
