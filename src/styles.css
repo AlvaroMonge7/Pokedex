@@ -1,1 +1,290 @@
-/* You can add global styles to this file, and also import other style files */
+/* diseño mostrar carta específica */
+.specific{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 120px;
+}
+
+/* diseño lsita de tarjetas */
+.card-list {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-container {
+  flex: 0 0 calc(20% - 20px);
+  margin: 20px;
+}
+
+/* diseño de la carta */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 280px;
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
+    0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 88%;
+  width: 88%;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.content > .top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 20%;
+  background-color: white;
+  p {
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  
+}
+img {
+  width: 80px;
+  height: 80px;
+}
+
+.content > .middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40%;
+  background: linear-gradient(#f9bc61, #fde8c9 75%);
+  padding-left: 15px;
+  padding-right: 15px;
+
+  div > p:first-child {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  div > p:last-child {
+    margin: 0;
+    font-weight: bold;
+  }
+}
+
+.content > .bottom {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los divs se envuelvan en múltiples líneas */
+  justify-content: space-between;
+  align-items: center;
+  height: 55%;
+}
+
+.content > .bottom > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.33% - 10px); /* Ajusta el ancho para tres divs por fila */
+  margin-bottom: 10px; /* Espacio entre filas */
+}
+
+.content > .bottom > div > p {
+  margin: 5px 0; /* Ajusta los márgenes superiores e inferiores de los elementos p */
+}
+
+.content > .bottom > div > p:first-child {
+  height: 27px;
+  font-weight: bold;
+}
+
+.types {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.name {
+  margin-right: auto;
+  padding-left: 8px;
+}
+
+.types > div {
+  padding: 3px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.types >div >img{
+  width: 40px;
+  height: 40px;
+}
+
+/* diseño de la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed; /* Fijar la barra de navegación */
+  width: 100%; /* Ancho completo de la pantalla */
+  top: 0; /* Pegar la barra de navegación en la parte superior */
+  z-index: 1000; /* Asegurar que esté sobre otros elementos */
+}
+
+.logo img {
+  height: 60px;
+  width: 100px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 150px;
+}
+
+.search button {
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.search button:hover {
+  background-color: #45a049;
+}
+/* colores de las cartas */
+.card-fire {
+  background: linear-gradient(#ff6347, #fde8c9);
+  .content > .middle {
+    background: linear-gradient(#ff6347, #fde8c9);
+  }
+}
+
+.card-water {
+  background: linear-gradient(#87ceeb, #c9eefd);
+  .content > .middle {
+    background: linear-gradient(#87ceeb, #c9eefd);
+  }
+}
+
+.card-grass {
+  background: linear-gradient(#8fbc8f, #dcfdc9);
+  .content > .middle {
+      background: linear-gradient(#8fbc8f, #dcfdc9);
+  }
+}
+
+.card-electric {
+  background: linear-gradient(#ffd700, #fdf5c9);
+  .content > .middle {
+      background: linear-gradient(#ffd700, #fdf5c9);
+  }
+}
+
+.card-rock {
+  background: linear-gradient(#a9a9a9, #d1d1d1);
+  .content > .middle {
+      background: linear-gradient(#a9a9a9, #d1d1d1);
+  }
+}
+
+.card-flying {
+  background: linear-gradient(#add8e6, #fde8c9);
+  .content > .middle {
+      background: linear-gradient(#add8e6, #fde8c9);
+  }
+}
+
+.card-psychic {
+  background: linear-gradient(#da70d6, #ddc9fd);
+  .content > .middle {
+      background: linear-gradient(#da70d6, #ddc9fd);
+  }
+}
+
+.card-poison {
+  background: linear-gradient(#800080, #eac9fd);
+  .content > .middle {
+      background: linear-gradient(#800080, #eac9fd);
+  }
+}
+
+.card-ice {
+  background: linear-gradient(#ffffff, #c9e4fd);
+  .content > .middle {
+      background: linear-gradient(#ffffff, #c9e4fd);
+  }
+}
+
+.card-fighting {
+  background: linear-gradient(#ff0000, #fdc9c9);
+  .content > .middle {
+      background: linear-gradient(#ff0000, #fdc9c9);
+  }
+}
+
+.card-bug {
+  background: linear-gradient(#228b22, #d2fdc9);
+  .content > .middle {
+      background: linear-gradient(#228b22, #d2fdc9);
+  }
+}
+
+.card-normal {
+  background: linear-gradient(#c0c0c0, #f3f3f3);
+  .content > .middle {
+      background: linear-gradient(#c0c0c0, #f3f3f3);
+  }
+}
+
+.card-default {
+  background: linear-gradient(#f0f0f0, #f3f3f3);
+  .content > .middle {
+      background: linear-gradient(#f0f0f0, #f3f3f3);
+  }
+}
+
+/* pokemon no encontrado */
+.card-not-found {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+}
+
+/* fondo pagina web */
+
+body {
+  background-image: url('/assets/img/logos/fondo.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fondo fijo */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}

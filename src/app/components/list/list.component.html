@@ -1,3 +1,6 @@
-<div *ngFor="let item of pokemonList">
-    <app-card url="{{item.url}}"></app-card>
+<div class="card-list">
+    <div *ngFor="let item of pokemonList" class="card-container">
+        <app-card url="{{item.name}}"></app-card><!-- cambiar de url a name -->
+    </div>
 </div>
+

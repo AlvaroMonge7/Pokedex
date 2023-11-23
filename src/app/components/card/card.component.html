@@ -1,14 +1,33 @@
-<div>
-    {{pokemon?.name}}
-    <img src="{{pokemon?.sprites.other.dream_world.front_default}}">
-    <div *ngFor="let item of pokemon?.types">
-        {{item.type.name}}
+<div *ngIf="pokemon !== null; else notFound" class="card" [ngClass]="getCardBackgroundColor()">
+  <div class="content">
+    <div class="top">
+      <div class="name">
+        <p>{{primeraMayuscula( pokemon?.name )}}</p>
+      </div>
+      <div class="types">
+        <div *ngFor="let item of pokemon?.types">
+          <img src="../../../assets/img/tipos/{{item.type.name}}.png" alt="">
+        </div>
+      </div>
     </div>
-    {{pokemon?.weight}}
-    {{pokemon?.height}}
-    <ul>
-        <li *ngFor="let item of pokemon?.stats">
-            {{item.stat.name}}:{{item.base_stat}}
-        </li>
-    </ul>
+    <div class="middle">
+      <div>
+        <p>Altura: {{ pokemon?.height }}</p>
+        <p>Peso: {{ pokemon?.weight }}</p>
+      </div>
+      <img src="{{ pokemon?.sprites.other.dream_world.front_default }}" />
+    </div>
+    <div class="bottom">
+      <div *ngFor="let item of pokemon?.stats">
+        <p>{{ item.stat.name }}</p>
+        <p>{{ item.base_stat }}</p>
+      </div>
+    </div>
+  </div>
 </div>
+
+<ng-template #notFound>
+  <div class="card-not-found">
+    <p>Pokemon no encontrado</p>
+  </div>
+</ng-template>
