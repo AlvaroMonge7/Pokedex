@@ -81,7 +81,7 @@ img {
 
 .content > .bottom {
   display: flex;
-  flex-wrap: wrap; /* Permite que los divs se envuelvan en múltiples líneas */
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: 55%;
