@@ -9,7 +9,6 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 export class CardComponent implements OnInit, OnChanges {
   @Input() name: string = '';
-  @Input() url: string = '';
   pokemon: any;
 
   constructor(private pokemonService: PokemonService) {}
@@ -19,13 +18,13 @@ export class CardComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['url'] && !changes['url'].firstChange) {
+    if (changes['name'] && !changes['name'].firstChange) {
       this.fetchPokemon();
     }
   }
 
   fetchPokemon() {
-    this.pokemonService.getPokemon(this.url).pipe(
+    this.pokemonService.getPokemon(this.name).pipe(
       catchError((error) => {
         return of(null);
       })
@@ -62,12 +61,25 @@ export class CardComponent implements OnInit, OnChanges {
           return 'card-bug';
         case 'normal':
           return 'card-normal';
+        case 'steel':
+          return 'card-steel';
+        case 'dragon':
+          return 'card-dragon';
+        case 'ghost':
+          return 'card-ghost'; 
+        case 'fairy':
+          return 'card-fairy';
+        case 'dark':
+          return 'card-dark';
+        case 'ground':
+          return 'card-ground';
         default:
           return 'card-default';
       }
     }
     return 'card-default';
   }
+  
 
   primeraMayuscula(text: string) {
     if (!text) {

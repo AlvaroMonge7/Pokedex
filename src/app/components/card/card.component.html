@@ -2,11 +2,11 @@
   <div class="content">
     <div class="top">
       <div class="name">
-        <p>{{primeraMayuscula( pokemon?.name )}}</p>
+        <h2>{{primeraMayuscula( pokemon?.name )}}</h2>
       </div>
       <div class="types">
         <div *ngFor="let item of pokemon?.types">
-          <img src="../../../assets/img/tipos/{{item.type.name}}.png" alt="">
+          <img src="../../../assets/img/types/{{item.type.name}}.png" alt="">
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class SpecificComponent implements OnInit {
 
   name: string | undefined;
+  renderer: any;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -17,5 +18,4 @@ export class SpecificComponent implements OnInit {
       this.name = params.get('name') ?? 'valorPorDefecto';
     });
   }
-
 }

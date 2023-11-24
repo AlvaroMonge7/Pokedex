@@ -46,6 +46,7 @@
   align-items: center;
   height: 20%;
   background-color: white;
+  border-radius: 8px;
   p {
     font-weight: bold;
     font-size: 12px;
@@ -90,12 +91,13 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(33.33% - 10px); /* Ajusta el ancho para tres divs por fila */
-  margin-bottom: 10px; /* Espacio entre filas */
+  width: calc(33.33% - 10px);
+  margin-bottom: 10px; 
+  margin-left: 10px; 
 }
 
 .content > .bottom > div > p {
-  margin: 5px 0; /* Ajusta los márgenes superiores e inferiores de los elementos p */
+  margin: 5px 0; 
 }
 
 .content > .bottom > div > p:first-child {
@@ -112,7 +114,7 @@ img {
 
 .name {
   margin-right: auto;
-  padding-left: 8px;
+  padding-left: 20px;
 }
 
 .types > div {
@@ -134,10 +136,10 @@ img {
   padding: 10px;
   background-color: #333;
   color: white;
-  position: fixed; /* Fijar la barra de navegación */
-  width: 100%; /* Ancho completo de la pantalla */
-  top: 0; /* Pegar la barra de navegación en la parte superior */
-  z-index: 1000; /* Asegurar que esté sobre otros elementos */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo img {
@@ -169,11 +171,31 @@ img {
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s;
+  margin-right: 13px;
 }
 
 .search button:hover {
   background-color: #45a049;
 }
+
+.volver{
+  display: flex;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-top: -100px;
+  margin-bottom: 100px;
+}
+
+.volver button:hover {
+  background-color: #45a049;
+}
+
 /* colores de las cartas */
 .card-fire {
   background: linear-gradient(#ff6347, #fde8c9);
@@ -259,6 +281,48 @@ img {
   }
 }
 
+.card-steel {
+  background: linear-gradient(#A0A0A0, #D3D3D3);
+  .content > .middle {
+    background: linear-gradient(#A0A0A0, #D3D3D3);
+  }
+}
+
+.card-dragon {
+  background: linear-gradient(#7038F8, #B0A0FF);
+  .content > .middle {
+    background: linear-gradient(#7038F8, #B0A0FF);
+  }
+}
+
+.card-ghost {
+  background: linear-gradient(#705898, #C5B4E3);
+  .content > .middle {
+    background: linear-gradient(#705898, #C5B4E3);
+  }
+}
+
+.card-fairy {
+  background: linear-gradient(#F0B6BC, #F9E6E7);
+  .content > .middle {
+    background: linear-gradient(#F0B6BC, #F9E6E7);
+  }
+}
+
+.card-dark {
+  background: linear-gradient(#6F5747, #8D746F);
+  .content > .middle {
+    background: linear-gradient(#6F5747, #8D746F);
+  }
+}
+
+.card-ground {
+  background: linear-gradient(#D1BE9B, #E6DABF);
+  .content > .middle {
+    background: linear-gradient(#D1BE9B, #E6DABF);
+  }
+}
+
 .card-default {
   background: linear-gradient(#f0f0f0, #f3f3f3);
   .content > .middle {
@@ -283,7 +347,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Fondo fijo */
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
   height: 100vh;
